@@ -1,0 +1,22 @@
+RewriteEngine On
+
+# Unless directory, remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/$ http://nietedu.in/admin/$1 [R=301,L]
+
+# Redirect external .php requests to extensionless URL
+RewriteCond %{THE_REQUEST} ^(.+)\.php([#?][^\ ]*)?\ HTTP/
+RewriteRule ^(.+)\.php$ http://nietedu.in/admin/$1 [R=301,L]
+
+# Resolve .php file for extensionless PHP URLs
+RewriteRule ^([^/.]+)$ $1.php [L]
+
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php73” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
