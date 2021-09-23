@@ -12,7 +12,7 @@ $username_err = $password_err = $type = "";
 fetch_global('msg');
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: ".$link."/client/?pid=0");
+    header("location: " . $link . "/client/?pid=0");
     exit;
 }
 // Processing form data when form is submitted else 
@@ -29,20 +29,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $password = trim($_POST["password"]);
     }
-    echo $_SESSION["message"]; $_SESSION['message']='';
+    echo $_SESSION["message"];
+    $_SESSION['message'] = '';
     // Validate credentials
     if (empty($_SESSION['message'])) {
         // Prepare a select statement
-$id = 'AN'.rand(111,999).rand(111,999).rand(00,99);
+        $id = 'AN' . rand(111, 999) . rand(111, 999) . rand(00, 99);
         $sql = "INSERT INTO `client_details`(`cid`, `apiId`, `permission`, `name`, `email`,`sex`, `passcode`, `contact`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-$permission = 'p_1,p_2,p_3,p_4,p_5,p_6,p_7,p_8,p_9,p_10,p_11,p_12';
-        $result = modifyRecord($sql, 'sssssssi', [$id,getToken(20),$permission,$name,$_POST['email'],$_POST['gender'],$password,$_POST['phone']]);
+        $permission = 'p_1,p_2,p_3,p_4,p_5,p_6,p_7,p_8,p_9,p_10,p_11,p_12';
+        $result = modifyRecord($sql, 'sssssssi', [$id, getToken(20), $permission, $name, $_POST['email'], $_POST['gender'], $password, $_POST['phone']]);
         // Store result
-        if($result) {
-    $sqlSelect2 = "INSERT INTO wallet (`wallet_id`,`balance`,`wall_password`) VALUES ( '" . $id . "',0," . rand(1111, 99999) . ")";
-   if(runQuery($sqlSelect2))
-            header("location: ".$link."/client/login.php?pid=0&msg=10");
-                    exit;
+        if ($result) {
+            $sqlSelect2 = "INSERT INTO wallet (`wallet_id`,`balance`,`wall_password`) VALUES ( '" . $id . "',0," . rand(1111, 99999) . ")";
+            if (runQuery($sqlSelect2))
+                header("location: " . $link . "/client/login.php?pid=0&msg=10");
+            exit;
         } else {
             // Display an error message if username doesn't exist
             $msg = 4;
@@ -90,8 +91,7 @@ $permission = 'p_1,p_2,p_3,p_4,p_5,p_6,p_7,p_8,p_9,p_10,p_11,p_12';
         <!-- ============================================================== -->
         <!-- Login box.scss -->
         <!-- ============================================================== -->
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
-            style="background:url(../admin/assets/images/big/auth-bg.jpg) no-repeat center center;">
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative" style="background:url(../admin/assets/images/big/auth-bg.jpg) no-repeat center center;">
             <div class="auth-box row text-center">
                 <div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(../admin/assets/images/big/3.jpg);">
                 </div>
@@ -108,32 +108,32 @@ $permission = 'p_1,p_2,p_3,p_4,p_5,p_6,p_7,p_8,p_9,p_10,p_11,p_12';
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="email" type="email" placeholder="email address">
+                                        <input class="form-control" name="email" id="email" type="email" placeholder="email address">
+                                        <div id="emailStatus"></div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="phone" type="number" maxlength="10" placeholder="mobile number">
+                                        <input class="form-control" name="phone" id="phone" type="number" maxlength="10" placeholder="mobile number">
+                                        <div id="phoneStatus"></div>
                                     </div>
                                 </div>
-                                
-                    <div class="col-lg-12">
-                        <label class="mr-2 float-left" > Gender   </label>
-                                <div class=" form-group form-check form-check-inline">
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" class="custom-control-input" value="male" id="customControlValidation2"
-                                            name="gender">
-                                        <label class="custom-control-label" for="customControlValidation2">Male</label>
+
+                                <div class="col-lg-12">
+                                    <label class="mr-2 float-left"> Gender </label>
+                                    <div class=" form-group form-check form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" value="male" id="customControlValidation2" name="gender">
+                                            <label class="custom-control-label" for="customControlValidation2">Male</label>
+                                        </div>
+                                    </div>
+                                    <div class=" form-group form-check form-check-inline">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" value="female" id="customControlValidation3" name="gender">
+                                            <label class="custom-control-label" for="customControlValidation3">Female</label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class=" form-group form-check form-check-inline">
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" class="custom-control-input" value="female" id="customControlValidation3"
-                                            name="gender">
-                                        <label class="custom-control-label" for="customControlValidation3">Female</label>
-                                    </div>
-                                </div>
-                            </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
                                         <input class="form-control" name="password" password="password" type="password" placeholder="password">
@@ -171,10 +171,10 @@ $permission = 'p_1,p_2,p_3,p_4,p_5,p_6,p_7,p_8,p_9,p_10,p_11,p_12';
     <script>
         $(".preloader ").fadeOut();
     </script>
-        <!-- SweetAlert2 -->
-        <script src="../admin/assets/sweetalert2/sweetalert2.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="../admin/assets/extra-libs/sweetalert2/sweetalert2.min.js"></script>
     <!-- Toastr -->
-    <script src="../admin/assets/toastr/toastr.min.js"></script>
+    <script src="../admin/assets/extra-libs/toastr/toastr.min.js"></script>
     <script>
         $(document).ready(function() {
 
@@ -210,6 +210,42 @@ $permission = 'p_1,p_2,p_3,p_4,p_5,p_6,p_7,p_8,p_9,p_10,p_11,p_12';
 
             $msg = 0;
             ?>
+            $("#email").on("change", function() {
+                var email = $("#email");
+                $.ajax({
+                    url: "includes/check_email.php",
+                    data: {
+                        email: email.val()
+                    },
+                    type: 'post',
+                    success: function(output) {
+                        if (output == 'true') {
+                            $("#emailStatus").html(' <small id="name13" class="badge badge-default badge-danger form-text text-white float-right"><i class="fas fa-info mr-2"></i> Sorry This ID is already Registered </small>');
+                            email.val('');
+                        } else
+                            $("#emailStatus").html(' <small id="name13" class="badge badge-default badge-success form-text text-white float-right"><i class="fas fa-check mr-2"></i> Email Available </small>');
+                    }
+                });
+            });
+
+            $("#phone").on("change", function() {
+                var phone = $(this);
+                $.ajax({
+                    url: "includes/check_email.php",
+                    data: {
+                        email: phone.val()
+                    },
+                    type: 'post',
+                    success: function(output) {
+                        if (output == 'true') {
+                            $("#phoneStatus").html(' <small id="name13" class="badge badge-default badge-danger form-text text-white float-right"><i class="fas fa-info mr-2"></i> Sorry This ID is already Registered </small>');
+                            phone.val('');
+                        } else
+                            $("#phoneStatus").html(' <small id="name13" class="badge badge-default badge-success form-text text-white float-right"><i class="fas fa-check mr-2"></i> Email Available </small>');
+                    }
+                });
+            });
+
         });
     </script>
 </body>
