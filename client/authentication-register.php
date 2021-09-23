@@ -34,6 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate credentials
     if (empty($_SESSION['message'])) {
         // Prepare a select statement
+        $sql = "SELECT `email` FROM `client_details` WHERE email = '" . $_POST['email'] . "' OR contact = '" . $_POST['email'] . "' ";
+$result = getarrayassoc($sql);
+// echo $sql;
+if (strlen($result['email']) <= 4) {
         $id = 'AN' . rand(111, 999) . rand(111, 999) . rand(00, 99);
         $sql = "INSERT INTO `client_details`(`cid`, `apiId`, `permission`, `name`, `email`,`sex`, `passcode`, `contact`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $permission = 'p_1,p_2,p_3,p_4,p_5,p_6,p_7,p_8,p_9,p_10,p_11,p_12';
@@ -49,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $msg = 4;
         }
     }
+}
 }
 ?>
 <!DOCTYPE html>
@@ -210,7 +215,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $msg = 0;
             ?>
-            $("#email").on("change", function(event) {
+            $("#email").on("focus", function(event) {
                 var email = $("#email");
                 var check = "true";
 
