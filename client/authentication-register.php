@@ -212,6 +212,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ?>
             $("#email").on("change", function(event) {
                 var email = $("#email");
+                var check = "true";
+
                 $.ajax({
                     url: "includes/check_email.php",
                     data: {
@@ -220,7 +222,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     type: 'post',
                     success: function(output) {
                         console.log(output);
-                        if (output === 'true') {
+
+                        if(output.indexOf(check) != -1){
                             $("#emailStatus").html(' <small id="name13" class="badge badge-default badge-danger form-text text-white float-right"><i class="fas fa-info mr-2"></i> Sorry This ID is already Registered </small>');
                             email.val('');
                             event.preventDefault();
