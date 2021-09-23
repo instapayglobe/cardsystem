@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/u488207795/domains/instapayglobe.com/public_html/
+    - /bin/cp index.html $DEPLOYPATH
