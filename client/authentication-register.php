@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     </div>
                                 </div>
                                 <div class="col-lg-6 text-center mt-3">
-                                    <button type="submit" class="btn btn-sm btn-block btn-dark">Sign In</button>
+                                    <button type="submit" class="btn btn-sm btn-block btn-dark">Register</button>
                                 </div>
                                 <div class="col-lg-6 text-center mt-3">
                                     <button type="reset" class="btn btn-sm btn-block btn-danger">Clear</button>
