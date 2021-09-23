@@ -11,7 +11,7 @@ $sql = "SELECT count(`email`) as email FROM `client_details` WHERE email = '" . 
 $result = getarrayassoc($sql);
 // echo $sql;
 if(is_array($result)){
-if ($result['email'] !== 0) {
+if ($result['email'] !== '0') {
     echo 'true'.$sql;
 }
 else echo 'false'.$sql;
