@@ -1,9 +1,9 @@
 <?php
 $api = $database = $host = $user = $pass = "";
 define('DB_SERVER', '127.0.0.1');
-define('DB_SERVER_USERNAME',  'root');
-define('DB_SERVER_PASSWORD', '');
-define('DB_DATABASE', 'cardsystem');
+define('DB_SERVER_USERNAME',  'u488207795_root');
+define('DB_SERVER_PASSWORD', '7Gtan!T>ijH]');
+define('DB_DATABASE', 'u488207795_cardsystem');
 if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
 	$link = "https://";
 else
