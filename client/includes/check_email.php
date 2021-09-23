@@ -7,15 +7,10 @@ require "../../admin/includes/logic/define-config.php";
 require "../../admin/includes/logic/functions.php";
 require "../../admin/includes/logic/config.php";
 
-$sql = "SELECT count(`email`) as email FROM `client_details` WHERE email = '" . $_POST['email'] . "' OR contact = '" . $_POST['email'] . "' ";
+$sql = "SELECT `email` FROM `client_details` WHERE email = '" . $_POST['email'] . "' OR contact = '" . $_POST['email'] . "' ";
 $result = getarrayassoc($sql);
 // echo $sql;
-if(is_array($result)){
-if ($result['email'] !== '0') {
-    echo 'true'.$sql;
+if (strlen($result['email']) <= 4) {
+    echo 'false';
 }
-else echo 'false'.$sql;
-} else
-{
-     echo 'false'.$sql;
-}
+else echo 'true';
