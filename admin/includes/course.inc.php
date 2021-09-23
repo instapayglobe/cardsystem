@@ -59,5 +59,5 @@ $x = 0;
     }
 }
 if ($action == 'viewsubject' || $action == 'newsubject') {
-    $viewSubject = getamultiassoc("SELECT *, (SELECT `name` FROM `client_details` WHERE cid = cardS_details.cardholder ) as client FROM `cardS_details` WHERE 1 ORDER BY `created` DESC");
+    $viewSubject = getamultiassoc("SELECT *, (SELECT `name` FROM `client_details` WHERE cid = cards_details.cardholder ) as client FROM `cards_details` WHERE 1 ORDER BY `created` DESC");
 }

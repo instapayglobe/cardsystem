@@ -34,9 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_SESSION['message'])) {
         // Prepare a select statement
 $id = 'AN'.rand(111,999).rand(111,999).rand(00,99);
-        $sql = "INSERT INTO `client_details`(`cid`, `apiId`, `permission`, `name`, `email`,`sex`, `passcode`, `contact`) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO `client_details`(`cid`, `apiId`, `permission`, `name`, `email`,`sex`, `passcode`, `contact`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 $permission = 'p_1,p_2,p_3,p_4,p_5,p_6,p_7,p_8,p_9,p_10,p_11,p_12';
-        $result = modifyRecord($sql, 'ssssssi', [$id,getToken(20),$permission,$name,$_POST['email'],$_POST['gender'],$password,$_POST['phone']]);
+        $result = modifyRecord($sql, 'sssssssi', [$id,getToken(20),$permission,$name,$_POST['email'],$_POST['gender'],$password,$_POST['phone']]);
         // Store result
         if($result) {
     $sqlSelect2 = "INSERT INTO wallet (`wallet_id`,`balance`,`wall_password`) VALUES ( '" . $id . "',0," . rand(1111, 99999) . ")";
