@@ -219,7 +219,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     },
                     type: 'post',
                     success: function(output) {
-                        if (output == 'true') {
+                        if (output === 'true') {
                             $("#emailStatus").html(' <small id="name13" class="badge badge-default badge-danger form-text text-white float-right"><i class="fas fa-info mr-2"></i> Sorry This ID is already Registered </small>');
                             email.val('');
                             event.preventDefault();
