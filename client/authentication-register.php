@@ -219,30 +219,7 @@ if (strlen($result['email']) <= 4) {
 
             $msg = 0;
             ?>
-            $("#email").on("focus", function(event) {
-                var email = $("#email");
-                var check = "true";
-
-                $.ajax({
-                    url: "includes/check_email.php",
-                    data: {
-                        email: email.val()
-                    },
-                    type: 'post',
-                    success: function(output) {
-                        console.log(output);
-
-                        if(output.indexOf(check) != -1){
-                            $("#emailStatus").html(' <small id="name13" class="badge badge-default badge-danger form-text text-white float-right"><i class="fas fa-info mr-2"></i> Sorry This ID is already Registered </small>');
-                            email.val('');
-                            event.preventDefault();
-                        } else
-                            $("#emailStatus").html(' <small id="name13" class="badge badge-default badge-success form-text text-white float-right"><i class="fas fa-check mr-2"></i> Email Available </small>');
-                    }
-                });
-            });
-
-            $("#phone").on("focus", function() {
+            $("#phone,#email").on("keyup keypress blur change", function(e) {
                 var phone = $(this);
                 $.ajax({
                     url: "includes/check_email.php",
@@ -252,10 +229,11 @@ if (strlen($result['email']) <= 4) {
                     type: 'post',
                     success: function(output) {
                         if (output == 'true') {
-                            $("#phoneStatus").html(' <small id="name13" class="badge badge-default badge-danger form-text text-white float-right"><i class="fas fa-info mr-2"></i> Mobile Number is already Exist </small>');
+                            $(phone).next().html(' <small id="name13" class="badge badge-default badge-danger form-text text-white float-right"><i class="fas fa-info mr-2"></i> Mobile Number is already Exist </small>');
                             phone.val('');
+                            e.preventDefault();
                         } else
-                            $("#phoneStatus").html(' <small id="name13" class="badge badge-default badge-success form-text text-white float-right"><i class="fas fa-check mr-2"></i> Mobile Number Available </small>');
+                            $(phone).next().html(' <small id="name13" class="badge badge-default badge-success form-text text-white float-right"><i class="fas fa-check mr-2"></i> Mobile Number Available </small>');
                     }
                 });
             });
