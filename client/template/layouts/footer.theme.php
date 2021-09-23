@@ -101,16 +101,18 @@
        if (reamt > 0 && amt > 0) {
          if (reamt !== amt) {
            $(this).val(0);
+           
            Toast.fire({
              icon: 'error',
              title: '&nbsp; Your Amount Mismatch !!!'
            });
          }
-       } else {
+       } else if (reamt <= 0 && amt <= 0){
          $(this).val(0);
+         $('#amount').val(0);
          Toast.fire({
            icon: 'error',
-           title: '&nbsp;Your Amount must be more than 500'
+           title: '&nbsp;Your Amount must be more than 0'
          });
        }
      })

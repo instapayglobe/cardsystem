@@ -55,7 +55,7 @@ if (strlen($result['email']) <= 4) {
     }else {
         // Display an error message if username doesn't exist
         $msg = 6;
-        $error = "Something Went Wrong Please Try again";
+        $error = "Something Went Wrong. Please Try again";
     }
 }
 }

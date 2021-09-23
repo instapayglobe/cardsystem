@@ -5,13 +5,19 @@ if ($action === 'addmoney')
     fetch_global('add_now','agree');
     if($add_now === 'adding') {
     fetch_global('amount', 'deposite_by', 'dmedium', 'remark');
+    if($amount>0){
     $sql = "INSERT INTO `fund_request`( `wallet_id`, `user`, `amount`, `trans_id`, `status`, `dmedium`, `dby`,`remark`) VALUES ('X','" . $_SESSION['usercode'] . "', " . $amount . ", '" . getToken(12) . "',0, '" . $dmedium . "', '" . $deposite_by . "', '" . $remark . "')";
     if (runQuery($sql)) {
       $msg = 7;
     } else { $error = 'No account found with that {$param_user}';
       $msg = 7;
     }
-  }
+  }}
+} else
+{
+  $msg = 6;
+  $error = "Something went wrong";
+
 }
 if($agree === 'cardPayment') { 
   $netAmount = 0;

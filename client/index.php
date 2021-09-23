@@ -6,9 +6,9 @@ $errormessage = array();
 //error_reporting(E_ERROR | E_WARNING | E_PARSE);
 // Report all errors except E_NOTICE
 // This is the default value set in php.ini
-error_reporting(E_ALL ^ E_NOTICE);
-ini_set('display_errors', '1');
-// error_reporting(0);  
+// error_reporting(E_ALL ^ E_NOTICE);
+// ini_set('display_errors', '1');
+error_reporting(0);  
 include('../admin/includes/logic/define-config.php');
 include('../admin/includes/logic/functions.php');
 
