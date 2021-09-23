@@ -103,18 +103,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="name" type="text" placeholder="your name">
+                                        <input class="form-control" name="name" type="text" placeholder="your name" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="email" id="email" type="email" placeholder="email address">
+                                        <input class="form-control" name="email" id="email" type="email" placeholder="email address" required>
                                         <div id="emailStatus"></div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="phone" id="phone" type="number" maxlength="10" placeholder="mobile number">
+                                        <input class="form-control" name="phone" id="phone" type="number" maxlength="10" placeholder="mobile number" required>
                                         <div id="phoneStatus"></div>
                                     </div>
                                 </div>
@@ -123,20 +123,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <label class="mr-2 float-left"> Gender </label>
                                     <div class=" form-group form-check form-check-inline">
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" class="custom-control-input" value="male" id="customControlValidation2" name="gender">
+                                            <input type="radio" class="custom-control-input" value="male" id="customControlValidation2" name="gender" required>
                                             <label class="custom-control-label" for="customControlValidation2">Male</label>
                                         </div>
                                     </div>
                                     <div class=" form-group form-check form-check-inline">
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" class="custom-control-input" value="female" id="customControlValidation3" name="gender">
+                                            <input type="radio" class="custom-control-input" value="female" id="customControlValidation3" name="gender" required>
                                             <label class="custom-control-label" for="customControlValidation3">Female</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="password" password="password" type="password" placeholder="password">
+                                        <input class="form-control" name="password" password="password" type="password" placeholder="password" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 text-center mt-3">
@@ -210,7 +210,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $msg = 0;
             ?>
-            $("#email").on("change", function() {
+            $("#email").on("change", function(event) {
                 var email = $("#email");
                 $.ajax({
                     url: "includes/check_email.php",
@@ -222,6 +222,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         if (output == 'true') {
                             $("#emailStatus").html(' <small id="name13" class="badge badge-default badge-danger form-text text-white float-right"><i class="fas fa-info mr-2"></i> Sorry This ID is already Registered </small>');
                             email.val('');
+                            event.preventDefault();
                         } else
                             $("#emailStatus").html(' <small id="name13" class="badge badge-default badge-success form-text text-white float-right"><i class="fas fa-check mr-2"></i> Email Available </small>');
                     }
