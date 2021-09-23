@@ -233,7 +233,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 });
             });
 
-            $("#phone").on("change", function() {
+            $("#phone").on("focus", function() {
                 var phone = $(this);
                 $.ajax({
                     url: "includes/check_email.php",
