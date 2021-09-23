@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="phone" id="phone" type="number" maxlength="10" placeholder="mobile number" required>
+                                        <input class="form-control" name="phone" id="phone" type="text" title="Error Message" pattern="[1-9]{1}[0-9]{9}" required>
                                         <div id="phoneStatus"></div>
                                     </div>
                                 </div>
@@ -219,6 +219,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     },
                     type: 'post',
                     success: function(output) {
+                        console.log(output);
                         if (output === 'true') {
                             $("#emailStatus").html(' <small id="name13" class="badge badge-default badge-danger form-text text-white float-right"><i class="fas fa-info mr-2"></i> Sorry This ID is already Registered </small>');
                             email.val('');
