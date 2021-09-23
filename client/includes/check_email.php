@@ -12,10 +12,10 @@ $result = getarrayassoc($sql);
 // echo $sql;
 if(is_array($result)){
 if ($result['email'] > 0) {
-    echo 'true';
+    echo 'true'.$sql;
 }
 else echo 'false'.$sql;
 } else
 {
-     echo 'false';
+     echo 'false'.$sql;
 }
