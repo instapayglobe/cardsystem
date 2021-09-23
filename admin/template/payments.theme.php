@@ -244,7 +244,6 @@
                    <td><b>' . ($row['trans_id']) . '</b> </td>
                    <td><b>' . case_name($row['remark']) . '</b> </td>
                    <td> ' . $row['amount'] . ' </td>
-                   <td> --NA-- </td>
                    <td><b> ' . date('d-M-y H:s:i', strtotime($row['requested_date'])) . '</b> </td>
                   </tr>';
                   }
@@ -252,7 +251,7 @@
                 $total = $credit + $debit;
                 $color = ($total > 0) ? 'text-success' : 'text-danger';
                 echo '<tfoot>
-                    <td class="' . $color . '" ><b> Available Bal <i class="fas fa-rupee-sign " ></i> ' . $credit . ' </b></td>
+                    <tr class="' . $color . '" ><th colspan = "5"> Total of Trasactions = <i class="fas fa-rupee-sign " ></i> ' . $credit . ' </th></tr>
                    </tfoot>';
                 ?>
                 <!-- <td><b> '.formatDateCalender($row['adate'], 'd-M-y').' To '.formatDateCalender($row['edate'], 'd-M-y').' </b> </td> 
