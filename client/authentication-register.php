@@ -227,6 +227,10 @@ if (strlen($result['email']) <= 4) {
                         email: phone.val()
                     },
                     type: 'post',
+                    beforeSend: 
+                        {
+                            alert(1);
+                        },
                     success: function(output) {
                         if (output == 'true') {
                             $(phone).next().html(' <small id="name13" class="badge badge-default badge-danger form-text text-white float-right"><i class="fas fa-info mr-2"></i> Mobile Number is already Exist </small>');
