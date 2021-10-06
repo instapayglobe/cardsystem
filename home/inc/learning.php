@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
         <div class="about-box">
-          <h2>Welcome <strong class="yellow">in RPSS Family</strong></h2>
+          <h2>Welcome <strong class="yellow">in Instapayglobe Family</strong></h2>
           <p> “On the canvas of OPS, Let’s draw a golden tomorrow of your Child”
 
 Every child’s need are met with composition and support in a nurturing , fun and engaging environment where every child can learn without fear or pressure and at the same time produce results.Our prime focus is to understand each child for what they are and to assist them to overcome their limitations.

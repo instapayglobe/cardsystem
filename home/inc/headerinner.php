@@ -9,7 +9,8 @@ ob_start();
               <div class="full">
                 <div class="center-desk">
                   <div class="logo">
-                    <a href="home.php"><img src="images/logo.png" alt="#" /></a>
+                    <a href="home.php"><img width="100px" height="50px" src="./../admin/assets/images/logo-icon.png" alt="#" /></a>
+                    <h1 style="font-size: 1.4rem;" class="text-uppercase d-inline-flex" >Instapayglobe</h1>
                   </div>
                 </div>
               </div>
@@ -22,41 +23,36 @@ ob_start();
                     <ul class="menu-area-main">
                       <li class="active"> <a href="home.php">Home</a> </li>
                       <li> <a href="about.php">About </a> </li>
-                      <li> <a href="courses.php">Courses</a> 
+                      <li> <a href="courses.php">Product & Services</a> 
                         <ul>
-                          <li><a href="courses.php">Computer Courses</a></li>
-                          <li><a href="nielit.php">NIELIT Courses</a></li>
-                          <li><a href="govt_project.php">Govt Project</a></li>
-                          <li><a href="vocational.php">Vocational Courses</a></li>
-                          <li><a href="ntt.php">NTT/CTTC Courses</a></li>
-                          <li><a href="university.php">University Courses</a></li>
+                          <li><a href="courses.php">Domestic Money Transfer</a></li>
+                          <li><a href="nielit.php">Prepaid Cards</a></li>
+                          <li><a href="govt_project.php">Gift Card</a></li>
+                          <li><a href="vocational.php">Bill Payments</a></li>
+                          <li><a href="ntt.php">Fast Tag</a></li>
+                          <li><a href="university.php">Travel and Stay</a></li>
                         </ul>
                       </li>
-                      <li> <a href="license.php">License</a>
+                      <li> <a href="license.php">API</a>
                         <ul>
                           <li><a href="license.php">License</a></li>
-                          <li><a href="franchisee.php">Franchisee</a></li>
+                          <li><a href="franchisee.php">API Documents</a></li>
                         </ul>
                       </li>
-                      <li> <a href="gallery.php">Gallery</a>
+                      <li> <a href="contact.php">Faq's</a> </li>
+                      <li> <a href="contact.php">Sign Up</a> </li>
+                      <li> <a href="license.php">Login</a>
                         <ul>
-                          <li><a href="image-gallery.php">Image Gallery</a></li>
-                          <li><a href="video-gallery.php">Video Gallery</a></li>
+                          <li><a href="license.php">Distributor Login</a></li>
+                          <li><a href="franchisee.php">Retailer Login</a></li>
                         </ul>
                       </li>
-                      <li> <a href="student.php">Student Zone</a>
-                        <ul>
-                          <li><a href="check-registration.php">Check Your Registration</a></li>
-                          <li><a href="studentenq.php">Student Enquiry</a></li>
-                        </ul>
-                      </li>
-                      <li> <a href="contact.php">Contact</a> </li>
                     </ul>
                    </nav>
                  </div>
                </div> 
                <div class="mean-last">
-                       <a href="#"><img src="images/search_icon.png" alt="#" /></a> <a href="http://rpssedu.com/admindashboard/login.php">login</a></div>              
+                       <a href="#"><img src="images/search_icon.png" alt="#" /></a> <a href="./../client/login.php">login</a></div>              
              </div>
            </div>
          </div>

@@ -1,2 +1,2 @@
-<?php header("Location: client/"); 
+<?php header("Location: home/"); 
 die(); ?>
