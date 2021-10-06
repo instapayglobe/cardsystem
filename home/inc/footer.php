@@ -20,9 +20,9 @@
                       <li>
                         <a href="#"></a>ISO 27001:2013 Certified Assisted B2C Company </li>
                         <li>
-                          <a href="#"><img src="icon/email.png" alt="#" /></a>rpsseduhr@gmail.com </li>
+                          <a href="#"><img src="icon/email.png" alt="#" /></a>info@instapayglobe.com </li>
                           <li>
-                            <a href="#"><img src="icon/call.png" alt="#" /></a>+91 85291 55555<br>+91 98129 41711 </li>
+                            <a href="#"><img src="icon/call.png" alt="#" /></a>+91 89299 xxxxx<br>+91 98989 xxxxx </li>
                           </ul>
                           <ul class="social_link">
                             <li><a href="#"><img src="icon/fb.png"></a></li>
@@ -72,7 +72,7 @@
               </div>
               <div class="copyright">
                 <div class="container">
-                  <p>Copyright © 2021 Design by <a href="https://www.youtube.com/channel/UC6VAYvGwuRmUnPkPWfAbyGA/">C2-DigiEXL</a></p>
+                  <p>Copyright © 2021 Design by <a href="https//www.ads4net.com">Adsnet Digital Solution Pvt. Ltd.</a></p>
                 </div>
               </div>
             </div>
