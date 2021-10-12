@@ -1,3 +1,3 @@
 <?php header("Location: home/"); 
-//this is munish goyal desktop data
+// this is munish goyal desktop data
 die(); ?>

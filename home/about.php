@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <!-- site metas -->
-  <title>ABOUT</title>
+  <title>About Us</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -51,10 +51,21 @@
    <div class="container mt-5">
       <div class="row">
         <div class="col-sm-8 p-4">
-          <h1 class="text-warning">Message From Director</h1>
-          <h4>We are in a new era where India is marching ahead on the path of Industry 4.0. Professionals with their leadership quality and critical thinking skills can pave way for a better tomorrow. Institute industry interaction, onsite coaching, mentoring and experiential learning has become an integral part of the two years Management program. Rashtriya Prodyogik Shikshan Sansthan is committed to providing an intellectually stimulating environment for learning. We constantly strive to maintain a symbiotic relationship between teaching, learning and research .Teachers inspire student's intellectual curiosity and passion for learning.
+          <h1 class="text-warning">Application Programming Interfaces(API)</h1>
+          <h4>Instapayg Software Solutions specializes in providing innovative business solutions for various applications like design, development, marketing & support to meet the critical requirements of businesses for clients in Payment and Information Technology Industry. We build applications that enable multi-channel engagement for our customers, leveraging on site, off site and offshore resources with strategic global partnerships to deliver exceptional value.With our global presence we are well positioned to harness the best minds from different parts of the world to provide our clients with high-quality, cost-effective solutions for their business in the areas of IT and Payments solutions.
 
-When you step out from your institute and get busy with carving your own world, do remember to refer to and indeed cherish the values that your faculty and management here have tried to impart and ingrain in you.</h4>
+<br><br>We now offer “Instapayglobe” - (A complete payment solution), the real alternative to out-dated billing systems and payment gateways.Instapayg Payment solutions help to expand and accelerate your businesses to its fullest potential no matter which industry you are in. Offering skills tapping into a diverse range of industry – be it manufacturing, retail, healthcare, service or banking. We provide corporate solutions tailored to your specific needs.InstaPay API Gateway is “middleware” that makes available backend services to mobile, web and other external clients via a set of protocols and commonly through a set of REST ful application programming interfaces (APIs).API is an acronym that stands for “application programming interface,” and it allows apps to send information between each other.</h4>
+
+<br><br>PayG’s Unique Feature:
+
+    Consolidated payment provider
+    Easy-to-use secure technology
+    Innovative technology meets changing needs
+    Easy-to-use tools and resources
+    Multiple payment options for your customers
+    Integrated solutions for your customers
+    Exceptional 24/7 customer service
+
         </div>
         <div class="col-sm-4 p-4">
           <div class="directorr" style="width:150px; height: 150px;">
